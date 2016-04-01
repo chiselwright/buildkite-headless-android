@@ -1,0 +1,6 @@
+#!/bin/bash
+
+set -euo pipefail
+
+echo "+++ Installing java7-sdk"
+aptitude install java7-sdk
