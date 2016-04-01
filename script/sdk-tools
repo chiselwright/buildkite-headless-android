@@ -7,3 +7,5 @@ tools_version=r24.4.1-linux
 echo "+++ Downloading SDK Tools package (${tools_version})"
 curl --silent -O http://dl.google.com/android/android-sdk_${tools_version}.tgz
 tar xf android-sdk_${tools_version}.tgz
+cd android-sdk-linux/
+ls -larth
