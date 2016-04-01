@@ -1,8 +1,8 @@
 #!/bin/bash
 
-set -eo pipefail
+set -ueo pipefail
 
-tools_version=r24.4.1-linux
+tools_version=${BK_SDK_VERSION}
 
 echo "+++ Downloading SDK Tools package (${tools_version})"
 curl --silent -O http://dl.google.com/android/android-sdk_${tools_version}.tgz
