@@ -3,4 +3,4 @@
 set -euo pipefail
 
 echo "+++ Installing java7-sdk"
-aptitude install java7-sdk
+sudo aptitude install java7-sdk
