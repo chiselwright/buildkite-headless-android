@@ -5,7 +5,13 @@ set -ueo pipefail
 tools_version=${BK_SDK_VERSION}
 
 echo "+++ Downloading SDK Tools package (${tools_version})"
-curl --silent -O http://dl.google.com/android/android-sdk_${tools_version}.tgz
-tar xf android-sdk_${tools_version}.tgz
-cd android-sdk-linux/
+
+# don't download the same thing over and over
+if [ ! -f android-sdk_${tools_version}.tgz ]; then
+    curl --silent -O http://dl.google.com/android/android-sdk_${tools_version}.tgz
+    tar xf android-sdk_${tools_version}.tgz
+    mv android-sdk-linux android-sdk_${tools_version}
+fi
+
+cd android-sdk_${tools_version}
 ls -larth
