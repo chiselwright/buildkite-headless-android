@@ -8,7 +8,7 @@ echo "+++ Downloading SDK Tools package (${tools_version})"
 
 # don't download the same thing over and over
 if [ ! -f android-sdk_${tools_version}.tgz ]; then
-    curl --silent -O http://dl.google.com/android/android-sdk_${tools_version}.tgz
+    curl --progress-bar --silent -O http://dl.google.com/android/android-sdk_${tools_version}.tgz
     tar xf android-sdk_${tools_version}.tgz
     mv android-sdk-linux android-sdk_${tools_version}
 fi
